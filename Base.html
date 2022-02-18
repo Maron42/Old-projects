@@ -1,0 +1,141 @@
+<html class="gr__learn-norwegian_net"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO 8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Verb quiz</title>
+<script language="javascript">
+
+function paanytt(){
+
+document.oppgave.poengsum.value=0
+document.oppgave.svar.value=''
+document.oppgave.riktig.value=''
+}
+
+function sjekksvar(){
+var poeng=document.oppgave.poengsum.value
+
+var norsk=new Array(10)
+norsk[0]="være"
+norsk[1]="snakke"
+norsk[2]="hete"
+norsk[3]="lære"
+norsk[4]="bo"
+norsk[5]="se"
+norsk[6]="gå"
+norsk[7]="si"
+norsk[8]="gjøre"
+norsk[9]="ha"
+
+if (document.oppgave.svar.value==norsk[document.oppgave.tilfeldigtall.value]){
+poeng++
+document.oppgave.riktig.style.color='green'
+document.oppgave.riktig.value="RIKTIG    "+document.oppgave.spm.value+" = "+norsk[document.oppgave.tilfeldigtall.value]
+}
+
+if (document.oppgave.svar.value!=norsk[document.oppgave.tilfeldigtall.value]){
+poeng--
+document.oppgave.riktig.style.color='red'
+document.oppgave.riktig.value="FEIL    "+document.oppgave.spm.value+" = "+norsk[document.oppgave.tilfeldigtall.value]
+}
+
+document.oppgave.poengsum.value=poeng
+
+if (document.oppgave.poengsum.value>=10 || document.oppgave.poengsum.value<=-4){
+ferdig()
+}
+
+nyttord()
+}
+
+function nyttord(){
+
+var engelsk=new Array(10)
+engelsk[0]="be"
+engelsk[1]="talk"
+engelsk[2]="be called"
+engelsk[3]="learn"
+engelsk[4]="live"
+engelsk[5]="see"
+engelsk[6]="walk"
+engelsk[7]="say"
+engelsk[8]="do"
+engelsk[9]="have"
+
+var tilfeldig=Math.floor(Math.random()*10)
+var ord=engelsk[tilfeldig]
+document.oppgave.spm.value=ord
+document.oppgave.tilfeldigtall.value=tilfeldig
+}
+
+function ferdig(){
+if(document.oppgave.poengsum.value>=10){
+document.oppgave.riktig.style.color='blue'
+document.oppgave.riktig.value='Congratulations, you won!'
+}
+if(document.oppgave.poengsum.value<=-4){
+document.oppgave.riktig.style.color='blue'
+document.oppgave.riktig.value='You lost, try again.'
+}
+document.oppgave.poengsum.value=0
+}
+
+</script>
+</head>
+
+<body bgcolor="#99CCFF" vlink="#0000FF" data-gr-c-s-loaded="true">
+
+<p align="center">
+<font face="Century Gothic">Norwegian - The tutorial</font></p>
+<table border="1" width="100%" bordercolor="#6699FF" bgcolor="#FFFFFF">
+  <tbody><tr>
+    <td width="100%">
+      <p align="center"><font face="Verdana" size="5">Verb quiz</font></p>
+      <p>Click <i>"Start"</i> to start the quiz. An English verb will
+      appear in the upper textbox. Type the Norwegian translation of the verb in
+      the box below (without the infinitive marker <i>"å"</i>), and
+      click <i>"OK"</i>.
+      If your answer is correct, you'll score one point, if it's incorrect
+      you'll loose one point. Then a new verb will appear. You win the game if
+      you manage to score 10 points. You loose if you at any time during the game fall
+      down to -4 points. Don't give up before you have won! If you want to start
+      over again, click <i>"Start"</i>. Good luck!</p>
+      <p align="center">
+<input type="button" value="Start" onclick="javascript:paanytt();nyttord()" style="font-size: 14pt">
+      </p><form name="oppgave">
+<table border="0" width="100%">
+  <tbody><tr>
+    <td width="25%" align="right">
+<input type="text" name="spm" onfocus="blur()" size="16">
+    </td>
+    <td width="50%" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" name="riktig" size="24" onfocus="blur()" style="border-style: solid; border-color: #FFFFFF; cursor:default">
+    </td>
+  </tr>
+  <tr>
+    <td width="25%" align="right">
+<input type="text" name="svar" onfocus="this.value=''" size="16">
+    </td>
+    <td width="29%">
+&nbsp;&nbsp;&nbsp;
+<input type="button" value="    OK    " onclick="javascript:sjekksvar()">
+    </td>
+    <td width="21%" align="center">
+<p align="left">
+<input type="text" name="poengsum" value="0" size="2" onfocus="blur()" style="font-size: 18pt; font-family: Arial; border-style: outset; cursor:default">
+</p>
+    </td>
+  </tr>
+</tbody></table>
+<p>
+<input type="hidden" name="tilfeldigtall" value="0">
+</p></form>
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+</tbody></table>
+
+
+
+
+</body></html>

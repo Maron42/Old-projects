@@ -1,0 +1,298 @@
+<html class="gr__learn-norwegian_net"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO 8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Norwegian quiz</title>
+<style>
+   body {
+    margin: 0; /* Убираем отступы */
+   }
+   h1 {
+    background: #000080; /* Цвет фона блока */ 
+    color: #ffe; /* Цвет текста */ 
+    margin: 0; /* Нулевые отступы вокруг текста */ 
+    padding: 10px; /* Поля вокруг текста */ 
+   }
+  </style>
+  
+<script language="javascript">
+
+function paanytt(){
+
+document.oppgave.poengsum.value=0
+document.oppgave.svar.value=''
+document.oppgave.riktig.value=''
+}
+
+function sjekksvar(){
+var poeng=document.oppgave.poengsum.value
+
+var norsk=new Array(42)
+norsk[0]="lengre"
+norsk[1]="en dørvakt"
+norsk[2]="lett"
+norsk[3]="å tilhøre"
+norsk[4]="å flørte"
+norsk[5]="mulig"
+norsk[6]="å avvise"
+norsk[7]="å spy"
+norsk[8]="samleie"
+norsk[9]="å forvente"
+norsk[10]="å lage"
+norsk[11]="pule"
+norsk[12]="dra"    
+norsk[13]="å treffe"
+norsk[14]="runke"
+norsk[15]="å begynne"
+norsk[16]="derfor"
+norsk[17]="en regjering"
+norsk[18]="penger"
+norsk[19]="mot"
+norsk[20]="offentlig"
+norsk[21]="å leke"
+norsk[22]="senere"
+norsk[23]="å kjenne"
+norsk[24]="uten"
+norsk[25]="tung"
+norsk[26]="hele"
+norsk[27]="å løpe"
+norsk[28]="å trene"
+norsk[29]="endelig"
+norsk[30]="et bilde"
+norsk[31]="forlate"
+norsk[32]="å tenke"
+norsk[33]="siden"
+norsk[34]="viktig"
+norsk[35]="å forklare"
+norsk[36]="et sted"
+norsk[37]="vise"
+norsk[38]="å trenge"
+norsk[39]="nesten"
+norsk[40]="en stat"
+norsk[41]="sikkert"
+    
+    /*
+norsk[41]=""
+norsk[42]=""
+norsk[43]=""
+norsk[44]=""
+norsk[45]=""
+norsk[46]=""
+norsk[47]=""
+norsk[48]=""
+norsk[49]=""
+norsk[50]=""
+norsk[51]=""
+norsk[52]=""
+norsk[53]=""
+norsk[54]=""   */ 
+
+    
+if (document.oppgave.svar.value==norsk[document.oppgave.tilfeldigtall.value]){
+poeng++
+document.oppgave.riktig.style.color='green'
+document.oppgave.riktig.value="RIKTIG    "+document.oppgave.spm.value+" = "+norsk[document.oppgave.tilfeldigtall.value]
+}
+
+if (document.oppgave.svar.value!=norsk[document.oppgave.tilfeldigtall.value]){
+poeng--
+document.oppgave.riktig.style.color='red'
+document.oppgave.riktig.value="FEIL    "+document.oppgave.spm.value+" = "+norsk[document.oppgave.tilfeldigtall.value]
+}
+
+document.oppgave.poengsum.value=poeng
+
+if (document.oppgave.poengsum.value>=42 || document.oppgave.poengsum.value<=-20){
+ferdig()
+}
+
+nyttord()
+}
+
+function nyttord(){
+
+var engelsk=new Array(42)
+engelsk[0]="longer"
+engelsk[1]="a bouncer"
+engelsk[2]="light/easy"
+engelsk[3]="to belong"
+engelsk[4]="to flirt"
+engelsk[5]="possible"
+engelsk[6]="to reject"
+engelsk[7]="to puke"
+engelsk[8]="intercourse(sex)"
+engelsk[9]="to expect"
+engelsk[10]="to make"
+engelsk[11]="fuck(sex)"
+engelsk[12]="go/pull"    
+engelsk[13]="to meet"
+engelsk[14]="male masturbation"    
+engelsk[15]="to begin"
+engelsk[16]="therefore"
+engelsk[17]="a government"
+engelsk[18]="money"
+engelsk[19]="against"
+engelsk[20]="public"
+engelsk[21]="to play"
+engelsk[22]="later"
+engelsk[23]="to feel/know of"
+engelsk[24]="without"
+engelsk[25]="heavy"
+engelsk[26]="entire"
+engelsk[27]="to run"
+engelsk[28]="to train/exercise"
+engelsk[29]="finally"
+engelsk[30]="a picture"
+engelsk[31]="leave"
+engelsk[32]="to think"
+engelsk[33]="since"
+engelsk[34]="important"
+engelsk[35]="to explain"
+engelsk[36]="a place"
+engelsk[37]="show"
+engelsk[38]="to need"
+engelsk[39]="almost"
+engelsk[40]="a state"
+engelsk[41]="probably"
+    
+/*    
+engelsk[41]=""
+engelsk[42]=""
+engelsk[43]=""
+engelsk[44]=""
+engelsk[45]=""
+engelsk[46]=""
+engelsk[47]=""
+engelsk[48]=""
+engelsk[49]=""
+engelsk[50]=""
+engelsk[51]=""
+engelsk[52]=""
+engelsk[53]=""
+engelsk[54]=""   */ 
+    
+
+var tilfeldig=Math.floor(Math.random()*42)
+var ord=engelsk[tilfeldig]
+document.oppgave.spm.value=ord
+document.oppgave.tilfeldigtall.value=tilfeldig
+}
+
+function ferdig(){
+if(document.oppgave.poengsum.value>=42){
+document.oppgave.riktig.style.color='blue'
+document.oppgave.riktig.value='Congratulations, you won!'
+}
+if(document.oppgave.poengsum.value<=-20){
+document.oppgave.riktig.style.color='blue'
+document.oppgave.riktig.value='You lost, try again.'
+}
+document.oppgave.poengsum.value=0
+}
+
+</script>
+</head>
+
+<body bgcolor="#99CCFF" vlink="#0000FF" data-gr-c-s-loaded="true" >
+
+<p align="center">
+<font face="Century Gothic">Norwegian - The tutorial</font></p>
+<table border="0" width="100%" bordercolor="#6699FF" bgcolor="#000000">
+  <tbody><tr>
+    <td width="100%">
+      <p align="center"><font face="Verdana" size="5" color="#FFFFFF">Norwegian quiz</font></p>
+      <p><font color="#FFFFFF">Click <i>"Start"</i> to start the quiz. An English verb will
+      appear in the upper textbox. Type the Norwegian translation of the verb in
+      the box below (without the infinitive marker <i>"å"</i>), and
+      click <i>"OK"</i>.
+      If your answer is correct, you'll score one point, if it's incorrect
+      you'll loose one point. Then a new verb will appear. You win the game if
+      you manage to score 10 points. You loose if you at any time during the game fall
+      down to -4 points. Don't give up before you have won! If you want to start
+      over again, click <i>"Start"</i>. Good luck!</font></p>
+      <p align="center">
+<input type="button" value="Start" onclick="javascript:paanytt();nyttord()" style="font-size: 14pt; text-decoration: none;
+  outline: none;
+  display: inline-block;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+  background-size: 150% auto;
+  box-shadow: 0 0 20px rgba(0,0,0,.1);
+  transition: .5s;">
+      </p><form name="oppgave">
+<table border="0" width="100%">
+  <tbody><tr>
+    <td width="49%" align="right" >
+<input type="text" name="spm" onfocus="blur()" size="30" style="font-size: 20pt" >
+    </td>
+    <td width="50%" colspan="2" >&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" name="riktig" size="30" onfocus="blur()" style="font-size: 20pt" "border-style: solid; border-color: #FFFFFF; cursor:default">
+    </td>
+  </tr>
+  <tr>
+    <td width="25%" align="right"  >
+<input id="myInput"  type="text" name="svar" onfocus="this.value=''" size="30" style="font-size: 20pt" >
+    </td>
+    <td width="29%">
+&nbsp;&nbsp;&nbsp;
+<input id="myBtn" type="button" value="    OK    " onclick="javascript:sjekksvar()" style="text-decoration: none;
+  outline: none;
+  display: inline-block;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0,0,0,.1);
+  transition: .5s;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <input type="text" name="poengsum" value="0" size="2" onfocus="blur()"  style= "font-size: 18pt; font-family: Arial; border-style: outset; cursor:default" >
+    </td>
+    <td width="21%" align="center">
+<p align="left">
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+    document.getElementById("myInput").value = "";  
+  }
+});
+</script>
+
+
+</p>
+    </td>
+  </tr>
+</tbody></table>
+<p>
+<input type="hidden" name="tilfeldigtall" value="0">
+</p></form>
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+  
+</tbody></table>
+
+
+
+</body>
+
+<video autoplay loop>
+   <source src="Video.mp4" type="video/mp4" style="position:fixed; z-index:-1;
+   min-width:100%;
+   min-height:100%;
+   overflow:hidden;">
+
+</video>
+
+</html>
