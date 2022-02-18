@@ -1,0 +1,1066 @@
+<html>
+<head><title>Тест</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="data/css/bootstrap.min.css">
+<script src="data/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="data/data.js"></script>
+<script type="text/javascript">
+function startTimer() {
+  var my_timer = document.getElementById("my_timer");
+  var time = my_timer.innerHTML;
+  var arr = time.split(":");
+  var h = arr[0];
+  var m = arr[1];
+  var s = arr[2];
+  if (s == 0) {
+    if (m == 0) {
+      if (h == 0) {
+        proverit();
+        exit();
+      }
+      h--;
+      m = 60;
+      if (h < 10) h = "0" + h;
+    }
+    m--;
+    if (m < 10) m = "0" + m;
+    s = 59;
+  }
+  else s--;
+  if (s < 10) s = "0" + s;
+  document.getElementById("my_timer").innerHTML = h+":"+m+":"+s;
+  setTimeout(startTimer, 1000);
+}
+rekt1_value="";
+rekt2_value="";
+rekt3_value="";
+rekt4_value="";
+rekt5_value="";
+rekt6_value="";
+rekt7_value="";
+rekt8_value="";
+rekt9_value="";
+rekt10_value="";
+rekt11_value="";
+</script>
+<style>
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  padding-top: 80px;
+  background-color: #f5f5f5;
+}
+p, span, input, td {
+ font-size:24px;
+}
+button{
+    font-size:18px;
+}
+#ot {
+    color:blue;
+}
+</style>
+</head>
+<body onload="startTimer()" class="text-center" style="padding-left:20px;padding-right:20px">
+
+<div id="rtd" style="text-align:center;width:70%;display:fixed;">
+<p id="name_test" style="font-weight:bold;position:absolute;top:20px;padding-left:33%;">Тест. Тема - "<span id="tema"></span>".</p>
+<div id="rtd4" class="card" style="flex-direction:row;height: 123px;padding-top: 30px;padding-bottom: 30px;padding-left: 30px;padding-right: 30px;">
+      <div id="disp1" class="card" style="display:block;background-color: #c0c0c0;height: 100%;width: 10%;padding-top:10px;">
+        <p>#1</p>
+    </div>
+    <div id="disp11" class="card" style="display:none;background-color: #008000;height: 100%;width: 10%;padding-top:10px;">
+      <p>#1</p>
+  </div>
+  <div id="disp2" class="card" style="display:block;background-color: #c0c0c0;height: 100%;width: 10%;padding-top:10px;">
+    <p>#2</p>
+</div>
+<div id="disp22" class="card" style="display:none;background-color: #008000;height: 100%;width: 10%;padding-top:10px;">
+  <p>#2</p>
+</div>
+<div id="disp3" class="card" style="display:block;background-color: #c0c0c0;height: 100%;width: 10%;padding-top:10px;">
+  <p>#3</p>
+</div>
+<div id="disp33" class="card" style="display:none;background-color: #008000;height: 100%;width: 10%;padding-top:10px;">
+<p>#3</p>
+</div>
+<div id="disp4" class="card" style="display:block;background-color: #c0c0c0;height: 100%;width: 10%;padding-top:10px;">
+  <p>#4</p>
+</div>
+<div id="disp44" class="card" style="display:none;background-color: #008000;height: 100%;width: 10%;padding-top:10px;">
+<p>#4</p>
+</div>
+<div id="disp5" class="card" style="display:block;background-color: #c0c0c0;height: 100%;width: 10%;padding-top:10px;">
+  <p>#5</p>
+</div>
+<div id="disp55" class="card" style="display:none;background-color: #008000;height: 100%;width: 10%;padding-top:10px;">
+<p>#5</p>
+</div>
+<div id="disp6" class="card" style="display:block;background-color: #c0c0c0;height: 100%;width: 10%;padding-top:10px;">
+  <p>#6</p>
+</div>
+<div id="disp66" class="card" style="display:none;background-color: #008000;height: 100%;width: 10%;padding-top:10px;">
+<p>#6</p>
+</div>
+<div id="disp7" class="card" style="display:block;background-color: #c0c0c0;height: 100%;width: 10%;padding-top:10px;">
+  <p>#7</p>
+</div>
+<div id="disp77" class="card" style="display:none;background-color: #008000;height: 100%;width: 10%;padding-top:10px;">
+<p>#7</p>
+</div>
+<div id="disp8" class="card" style="display:block;background-color: #c0c0c0;height: 100%;width: 10%;padding-top:10px;">
+  <p>#8</p>
+</div>
+<div id="disp88" class="card" style="display:none;background-color: #008000;height: 100%;width: 10%;padding-top:10px;">
+<p>#8</p>
+</div>
+<div id="disp9" class="card" style="display:block;background-color: #c0c0c0;height: 100%;width: 10%;padding-top:10px;">
+  <p>#9</p>
+</div>
+<div id="disp99" class="card" style="display:none;background-color: #008000;height: 100%;width: 10%;padding-top:10px;">
+<p>#9</p>
+</div>
+<div id="disp10" class="card" style="display:block;background-color: #c0c0c0;height: 100%;width: 10%;padding-top:10px;">
+  <p>#10</p>
+</div>
+<div id="disp101" class="card" style="display:none;background-color: #008000;height: 100%;width: 10%;padding-top:10px;">
+<p>#10</p>
+</div>
+<div id="disp11" class="card" style="display:block;background-color: #c0c0c0;height: 100%;width: 10%;padding-top:10px;">
+  <p>#11</p>
+</div>
+<div id="disp111" class="card" style="display:none;background-color: #008000;height: 100%;width: 10%;padding-top:10px;">
+<p>#11</p>
+</div>
+
+ </div>
+<div id="rtd3" class="card" style="height: 527px;" >
+<div class="card-body">
+<div id="vopros1" style="display:block;">
+<p><span id="v_1" </span></p>
+<p align="left"><input name="rekt1" id="r1" type="radio" value="otvet1"> ответ1</p>
+<p align="left"><input name="rekt1" id="r2" type="radio" value="otvet2"> ответ2</p>
+<p align="left"><input name="rekt1" id="r3" type="radio" value="otvet3"> ответ3</p>
+<p align="left"><input name="rekt1" id="r4" type="radio" value="1"> 1</p>
+</div>
+<div id="vopros2" style="display:none;">
+<p><span id="v_2" </span></p>
+<p align="left"><input name="rekt2" id="rq1" type="radio" value="otvet1"> ответ1</p>
+<p align="left"><input name="rekt2" id="rq2" type="radio" value="otvet2"> ответ2</p>
+<p align="left"><input name="rekt2" id="rq3" type="radio" value="otvet3"> ответ3</p>
+<p align="left"><input name="rekt2" id="rq4" type="radio" value="otvet4"> ответ4</p>
+</div>
+<div id="vopros3" style="display:none;">
+<p><span id="v_3" </span></p>
+<p align="left"><input name="rekt3" id="rw1" type="radio" value="otvet1"> ответ1</p>
+<p align="left"><input name="rekt3" id="rw2" type="radio" value="otvet2"> ответ2</p>
+<p align="left"><input name="rekt3" id="rw3" type="radio" value="otvet3"> ответ3</p>
+<p align="left"><input name="rekt3" id="rw4" type="radio" value="otvet4"> ответ4</p>
+</div>
+<div id="vopros4" style="display:none;">
+<p><span id="v_4" </span></p>
+<p align="left"><input name="rekt4" id="re1" type="radio" value="otvet1"> ответ1</p>
+<p align="left"><input name="rekt4" id="re2" type="radio" value="otvet2"> ответ2</p>
+<p align="left"><input name="rekt4" id="re3" type="radio" value="otvet3"> ответ3</p>
+<p align="left"><input name="rekt4" id="re4" type="radio" value="otvet4"> ответ4</p>
+</div>
+<div id="vopros5" style="display:none;">
+<p><span id="v_5" </span></p>
+<p align="left"><input name="rekt5" id="rr1" type="radio" value="otvet1"> ответ1</p>
+<p align="left"><input name="rekt5" id="rr2" type="radio" value="otvet2"> ответ2</p>
+<p align="left"><input name="rekt5" id="rr3" type="radio" value="otvet3"> ответ3</p>
+<p align="left"><input name="rekt5" id="rr4" type="radio" value="otvet4"> ответ4</p>
+</div>
+<div id="vopros6" style="display:none;">
+<p><span id="v_6" </span></p>
+<p align="left"><input name="rekt6" id="rt1" type="radio" value="otvet1"> ответ1</p>
+<p align="left"><input name="rekt6" id="rt2" type="radio" value="otvet2"> ответ2</p>
+<p align="left"><input name="rekt6" id="rt3" type="radio" value="otvet3"> ответ3</p>
+<p align="left"><input name="rekt6" id="rt4" type="radio" value="otvet4"> ответ4</p>
+</div>
+<div id="vopros7" style="display:none;">
+<p><span id="v_7" </span></p>
+<p align="left"><input name="rekt7" id="ry1" type="radio" value="otvet1"> ответ1</p>
+<p align="left"><input name="rekt7" id="ry2" type="radio" value="otvet2"> ответ2</p>
+<p align="left"><input name="rekt7" id="ry3" type="radio" value="otvet3"> ответ3</p>
+<p align="left"><input name="rekt7" id="ry4" type="radio" value="otvet4"> ответ4</p>
+</div>
+<div id="vopros8" style="display:none;">
+<p><span id="v_8" </span></p>
+<p align="left"><input name="rekt8" id="ru1" type="radio" value="otvet1"> ответ1</p>
+<p align="left"><input name="rekt8" id="ru2" type="radio" value="otvet2"> ответ2</p>
+<p align="left"><input name="rekt8" id="ru3" type="radio" value="otvet3"> ответ3</p>
+<p align="left"><input name="rekt8" id="ru4" type="radio" value="otvet4"> ответ4</p>
+</div>
+<div id="vopros9" style="display:none;">
+<p><span id="v_9" </span></p>
+<p align="left"><input name="rekt9" id="ri1" type="radio" value="otvet1"> ответ1</p>
+<p align="left"><input name="rekt9" id="ri2" type="radio" value="otvet2"> ответ2</p>
+<p align="left"><input name="rekt9" id="ri3" type="radio" value="otvet3"> ответ3</p>
+<p align="left"><input name="rekt9" id="ri4" type="radio" value="otvet4"> ответ4</p>
+</div>
+<div id="vopros10" style="display:none;">
+<p><span id="v_10" </span></p>
+<p align="left"><input name="rekt10" id="ro1" type="radio" value="otvet1"> ответ1</p>
+<p align="left"><input name="rekt10" id="ro2" type="radio" value="otvet2"> ответ2</p>
+<p align="left"><input name="rekt10" id="ro3" type="radio" value="otvet3"> ответ3</p>
+<p align="left"><input name="rekt10" id="ro4" type="radio" value="otvet4"> ответ4</p>
+</div>
+<div id="vopros11" style="display:none;">
+<p align="center"><span id="v_11" </span></p>
+<p align="left"><input name="rekt11" id="rp1" type="radio" value="otvet1"> ответ1</p>
+<p align="left"><input name="rekt11" id="rp2" type="radio" value="otvet2"> ответ2</p>
+<p align="left"><input name="rekt11" id="rp3" type="radio" value="otvet3"> ответ3</p>
+<p align="left"><input name="rekt11" id="rp4" type="radio" value="otvet4"> ответ4</p>
+</div>
+<button id="kn_sl" class="btn btn-lg btn-primary btn-block" style="margin-left:auto;margin-right:auto;width:250px;" onclick="sled_vopr();">Следующий вопрос</button>
+<button id="kn_pr" class="btn btn-lg btn-primary btn-block" style="margin-left:auto;margin-right:auto;display:none;width:250px;" onclick="proverit();">Проверить</button>
+<button id="skip" class="btn btn-lg btn-primary btn-block button button-next" onclick="skip();" style="display: block; margin-left:auto;margin-right:auto;width:250px;"> Пропустить</button>
+<div id="rezultat"></div>
+</div>
+</div></div>
+<div id="rtd2" style="text-align:center;width:30%;">
+  <div id="timee" class="card" >
+   <p> Осталось времени: </p>
+   <p><span id="my_timer" style="color: #f00; font-size: 150%; font-weight: bold;"></span></p>
+  </div>
+  <div id="zet" class="card" style="display:block" >
+  <p> Вопросы: </p>
+  <button id="kn1" class="btn btn-primary" style="margin-left:auto;margin-right:auto;width:250px;margin-bottom:5px;" onclick="vopr1();">Вопрос №1</button>
+  <button id="kn2" class="btn btn-primary" style="margin-left:auto;margin-right:auto;width:250px;margin-bottom:5px;" onclick="vopr2();">Вопрос №2</button>
+  <button id="kn3" class="btn btn-primary" style="margin-left:auto;margin-right:auto;width:250px;margin-bottom:5px;" onclick="vopr3();">Вопрос №3</button>
+  <button id="kn4" class="btn btn-primary" style="margin-left:auto;margin-right:auto;width:250px;margin-bottom:5px;" onclick="vopr4();">Вопрос №4</button>
+  <button id="kn5" class="btn btn-primary" style="margin-left:auto;margin-right:auto;width:250px;margin-bottom:5px;" onclick="vopr5();">Вопрос №5</button>
+  <button id="kn6" class="btn btn-primary" style="margin-left:auto;margin-right:auto;width:250px;margin-bottom:5px;" onclick="vopr6();">Вопрос №6</button>
+  <button id="kn7" class="btn btn-primary" style="margin-left:auto;margin-right:auto;width:250px;margin-bottom:5px;" onclick="vopr7();">Вопрос №7</button>
+  <button id="kn8" class="btn btn-primary" style="margin-left:auto;margin-right:auto;width:250px;margin-bottom:5px;" onclick="vopr8();">Вопрос №8</button>
+  <button id="kn9" class="btn btn-primary" style="margin-left:auto;margin-right:auto;width:250px;margin-bottom:5px;" onclick="vopr9();">Вопрос №9</button>
+  <button id="kn10" class="btn btn-primary" style="margin-left:auto;margin-right:auto;width:250px;margin-bottom:5px;" onclick="vopr10();">Вопрос №10</button>
+  <button id="kn11" class="btn btn-primary" style="margin-left:auto;margin-right:auto;width:250px;margin-bottom:5px;" onclick="vopr11();">Вопрос №11</button>
+  
+  </div>
+</div>
+<script>
+
+document.addEventListener('DOMContentLoaded', function(){
+    if(vopros_ris_1 == "да"){
+        vopros_1 = "<img src='data/01.jpg' class='rounded mx-auto d-block'><br>"+vopros_1;
+    }
+    if(vopros_ris_2 == "да"){
+        vopros_2 = "<img src='data/02.jpg' class='rounded mx-auto d-block'><br>"+vopros_2;
+    }
+    if(vopros_ris_3 == "да"){
+        vopros_3 = "<img src='data/03.jpg' class='rounded mx-auto d-block'><br>"+vopros_3;
+    }
+    if(vopros_ris_4 == "да"){
+        vopros_4 = "<img src='data/04.jpg' class='rounded mx-auto d-block'><br>"+vopros_4;
+    }
+    if(vopros_ris_5 == "да"){
+        vopros_5 = "<img src='data/05.jpg' class='rounded mx-auto d-block'><br>"+vopros_5;
+    }
+    if(vopros_ris_6 == "да"){
+        vopros_6 = "<img src='data/06.jpg' class='rounded mx-auto d-block'><br>"+vopros_6;
+    }
+    if(vopros_ris_7 == "да"){
+        vopros_7 = "<img src='data/07.jpg' class='rounded mx-auto d-block'><br>"+vopros_7;
+    }
+    if(vopros_ris_8 == "да"){
+        vopros_8 = "<img src='data/08.jpg' class='rounded mx-auto d-block'><br>"+vopros_8;
+    }
+    if(vopros_ris_9 == "да"){
+        vopros_9 = "<img src='data/09.jpg' class='rounded mx-auto d-block'><br>"+vopros_9;
+    }
+    if(vopros_ris_10 == "да"){
+        vopros_10 = "<img src='data/10.jpg' class='rounded mx-auto d-block'><br>"+vopros_10;
+    }
+    if(vopros_ris_11 == "да"){
+        vopros_11 = "<img src='data/11.jpg' class='rounded mx-auto d-block'><br>"+vopros_11;
+    }
+    voprosi = [[vopros_1,pr_otv_zadachi_1],[vopros_2,pr_otv_zadachi_2],[vopros_3,pr_otv_zadachi_3],[vopros_4,pr_otv_zadachi_4],[vopros_5,pr_otv_zadachi_5],[vopros_6,pr_otv_zadachi_6],[vopros_7,pr_otv_zadachi_7],[vopros_8,pr_otv_zadachi_8],[vopros_9,pr_otv_zadachi_9],[vopros_10,pr_otv_zadachi_10],[vopros_11,pr_otv_zadachi_11],];
+    if(peremeshat_voprosi == "да"){
+        voprosi = peremeshat_vse_voprosi(voprosi);
+    }
+    document.getElementById('v_1').innerHTML = voprosi[0][0];
+    document.getElementById('v_2').innerHTML = voprosi[1][0];
+    document.getElementById('v_3').innerHTML = voprosi[2][0];
+    document.getElementById('v_4').innerHTML = voprosi[3][0];
+    document.getElementById('v_5').innerHTML = voprosi[4][0];
+    document.getElementById('v_6').innerHTML = voprosi[5][0];
+    document.getElementById('v_7').innerHTML = voprosi[6][0];
+    document.getElementById('v_8').innerHTML = voprosi[7][0];
+    document.getElementById('v_9').innerHTML = voprosi[8][0];
+    document.getElementById('v_10').innerHTML = voprosi[9][0];
+    document.getElementById('v_11').innerHTML = voprosi[10][0];
+    document.getElementById('tema').innerHTML = test;
+    document.getElementById('my_timer').innerHTML = time_out;
+});
+function vopr1(){
+  document.getElementById('vopros1').style.display = "block";
+  document.getElementById('vopros2').style.display = "none";
+  document.getElementById('vopros3').style.display = "none";
+  document.getElementById('vopros4').style.display = "none";
+  document.getElementById('vopros5').style.display = "none";
+  document.getElementById('vopros6').style.display = "none";
+  document.getElementById('vopros7').style.display = "none";
+  document.getElementById('vopros8').style.display = "none";
+  document.getElementById('vopros9').style.display = "none";
+  document.getElementById('vopros10').style.display = "none";
+  document.getElementById('vopros11').style.display = "none";
+  document.getElementById('kn_sl').style.display = "block";
+  document.getElementById('kn_pr').style.display = "none";
+}
+function vopr2(){
+  document.getElementById('vopros1').style.display = "none";
+  document.getElementById('vopros2').style.display = "block";
+  document.getElementById('vopros3').style.display = "none";
+  document.getElementById('vopros4').style.display = "none";
+  document.getElementById('vopros5').style.display = "none";
+  document.getElementById('vopros6').style.display = "none";
+  document.getElementById('vopros7').style.display = "none";
+  document.getElementById('vopros8').style.display = "none";
+  document.getElementById('vopros9').style.display = "none";
+  document.getElementById('vopros10').style.display = "none";
+  document.getElementById('vopros11').style.display = "none";
+  document.getElementById('kn_sl').style.display = "block";
+  document.getElementById('kn_pr').style.display = "none";
+}
+function vopr3(){
+  document.getElementById('vopros1').style.display = "none";
+  document.getElementById('vopros2').style.display = "none";
+  document.getElementById('vopros3').style.display = "block";
+  document.getElementById('vopros4').style.display = "none";
+  document.getElementById('vopros5').style.display = "none";
+  document.getElementById('vopros6').style.display = "none";
+  document.getElementById('vopros7').style.display = "none";
+  document.getElementById('vopros8').style.display = "none";
+  document.getElementById('vopros9').style.display = "none";
+  document.getElementById('vopros10').style.display = "none";
+  document.getElementById('vopros11').style.display = "none";
+  document.getElementById('kn_sl').style.display = "block";
+  document.getElementById('kn_pr').style.display = "none";
+}
+function vopr4(){
+  document.getElementById('vopros1').style.display = "none";
+  document.getElementById('vopros2').style.display = "none";
+  document.getElementById('vopros3').style.display = "none";
+  document.getElementById('vopros4').style.display = "block";
+  document.getElementById('vopros5').style.display = "none";
+  document.getElementById('vopros6').style.display = "none";
+  document.getElementById('vopros7').style.display = "none";
+  document.getElementById('vopros8').style.display = "none";
+  document.getElementById('vopros9').style.display = "none";
+  document.getElementById('vopros10').style.display = "none";
+  document.getElementById('vopros11').style.display = "none";
+  document.getElementById('kn_sl').style.display = "block";
+  document.getElementById('kn_pr').style.display = "none";
+}
+function vopr5(){
+  document.getElementById('vopros1').style.display = "none";
+  document.getElementById('vopros2').style.display = "none";
+  document.getElementById('vopros3').style.display = "none";
+  document.getElementById('vopros4').style.display = "none";
+  document.getElementById('vopros5').style.display = "block";
+  document.getElementById('vopros6').style.display = "none";
+  document.getElementById('vopros7').style.display = "none";
+  document.getElementById('vopros8').style.display = "none";
+  document.getElementById('vopros9').style.display = "none";
+  document.getElementById('vopros10').style.display = "none";
+  document.getElementById('vopros11').style.display = "none";
+  document.getElementById('kn_sl').style.display = "block";
+  document.getElementById('kn_pr').style.display = "none";
+}
+function vopr6(){
+  document.getElementById('vopros1').style.display = "none";
+  document.getElementById('vopros2').style.display = "none";
+  document.getElementById('vopros3').style.display = "none";
+  document.getElementById('vopros4').style.display = "none";
+  document.getElementById('vopros5').style.display = "none";
+  document.getElementById('vopros6').style.display = "block";
+  document.getElementById('vopros7').style.display = "none";
+  document.getElementById('vopros8').style.display = "none";
+  document.getElementById('vopros9').style.display = "none";
+  document.getElementById('vopros10').style.display = "none";
+  document.getElementById('vopros11').style.display = "none";
+  document.getElementById('kn_sl').style.display = "block";
+  document.getElementById('kn_pr').style.display = "none";
+}
+function vopr7(){
+  document.getElementById('vopros1').style.display = "none";
+  document.getElementById('vopros2').style.display = "none";
+  document.getElementById('vopros3').style.display = "none";
+  document.getElementById('vopros4').style.display = "none";
+  document.getElementById('vopros5').style.display = "none";
+  document.getElementById('vopros6').style.display = "none";
+  document.getElementById('vopros7').style.display = "block";
+  document.getElementById('vopros8').style.display = "none";
+  document.getElementById('vopros9').style.display = "none";
+  document.getElementById('vopros10').style.display = "none";
+  document.getElementById('vopros11').style.display = "none";
+  document.getElementById('kn_sl').style.display = "block";
+  document.getElementById('kn_pr').style.display = "none";
+}
+function vopr8(){
+  document.getElementById('vopros1').style.display = "none";
+  document.getElementById('vopros2').style.display = "none";
+  document.getElementById('vopros3').style.display = "none";
+  document.getElementById('vopros4').style.display = "none";
+  document.getElementById('vopros5').style.display = "none";
+  document.getElementById('vopros6').style.display = "none";
+  document.getElementById('vopros7').style.display = "none";
+  document.getElementById('vopros8').style.display = "block";
+  document.getElementById('vopros9').style.display = "none";
+  document.getElementById('vopros10').style.display = "none";
+  document.getElementById('vopros11').style.display = "none";
+  document.getElementById('kn_sl').style.display = "block";
+  document.getElementById('kn_pr').style.display = "none";
+  }
+  function vopr9(){
+    document.getElementById('vopros1').style.display = "none";
+    document.getElementById('vopros2').style.display = "none";
+    document.getElementById('vopros3').style.display = "none";
+    document.getElementById('vopros4').style.display = "none";
+    document.getElementById('vopros5').style.display = "none";
+    document.getElementById('vopros6').style.display = "none";
+    document.getElementById('vopros7').style.display = "none";
+    document.getElementById('vopros8').style.display = "none";
+    document.getElementById('vopros9').style.display = "block";
+    document.getElementById('vopros10').style.display = "none";
+    document.getElementById('vopros11').style.display = "none";
+    document.getElementById('kn_sl').style.display = "block";
+    document.getElementById('kn_pr').style.display = "none";
+  }
+  function vopr10(){
+    document.getElementById('vopros1').style.display = "none";
+    document.getElementById('vopros2').style.display = "none";
+    document.getElementById('vopros3').style.display = "none";
+    document.getElementById('vopros4').style.display = "none";
+    document.getElementById('vopros5').style.display = "none";
+    document.getElementById('vopros6').style.display = "none";
+    document.getElementById('vopros7').style.display = "none";
+    document.getElementById('vopros8').style.display = "none";
+    document.getElementById('vopros9').style.display = "none";
+    document.getElementById('vopros10').style.display = "block";
+    document.getElementById('vopros11').style.display = "none";
+    document.getElementById('kn_sl').style.display = "block";
+    document.getElementById('kn_pr').style.display = "none";
+  }
+function vopr11(){
+  document.getElementById('vopros1').style.display = "none";
+  document.getElementById('vopros2').style.display = "none";
+  document.getElementById('vopros3').style.display = "none";
+  document.getElementById('vopros4').style.display = "none";
+  document.getElementById('vopros5').style.display = "none";
+  document.getElementById('vopros6').style.display = "none";
+  document.getElementById('vopros7').style.display = "none";
+  document.getElementById('vopros8').style.display = "none";
+  document.getElementById('vopros9').style.display = "none";
+  document.getElementById('vopros10').style.display = "none";
+  document.getElementById('vopros11').style.display = "block";
+  document.getElementById('kn_sl').style.display = "none";
+  document.getElementById('kn_pr').style.display = "block";
+ }
+function sled_vopr(){
+    if(document.getElementById('vopros10').style.display == "block"){
+      if(document.getElementById('ro1').checked || document.getElementById('ro2').checked || document.getElementById('ro3').checked || document.getElementById('ro4').checked){
+        document.getElementById('vopros10').style.display = "none";
+        document.getElementById('vopros11').style.display = "block";
+        document.getElementById('kn_sl').style.display = "none";
+        document.getElementById('kn_pr').style.display = "block";
+      }
+    }
+    if(document.getElementById('vopros9').style.display == "block"){
+      if(document.getElementById('ri1').checked || document.getElementById('ri2').checked || document.getElementById('ri3').checked || document.getElementById('ri4').checked){
+        document.getElementById('vopros9').style.display = "none";
+        document.getElementById('vopros10').style.display = "block";
+    }
+  }
+    if(document.getElementById('vopros8').style.display == "block"){
+      if(document.getElementById('ru1').checked || document.getElementById('ru2').checked || document.getElementById('ru3').checked || document.getElementById('ru4').checked){
+        document.getElementById('vopros8').style.display = "none";
+        document.getElementById('vopros9').style.display = "block";
+    }
+  }
+    if(document.getElementById('vopros7').style.display == "block"){
+      if(document.getElementById('ry1').checked || document.getElementById('ry2').checked || document.getElementById('ry3').checked || document.getElementById('ry4').checked){
+        document.getElementById('vopros7').style.display = "none";
+        document.getElementById('vopros8').style.display = "block";
+      }
+    }
+    if(document.getElementById('vopros6').style.display == "block"){
+      if(document.getElementById('rt1').checked || document.getElementById('rt2').checked || document.getElementById('rt3').checked || document.getElementById('rt4').checked){
+        document.getElementById('vopros6').style.display = "none";
+        document.getElementById('vopros7').style.display = "block";
+    }
+  }
+    if(document.getElementById('vopros5').style.display == "block"){
+      if(document.getElementById('rr1').checked || document.getElementById('rr2').checked || document.getElementById('rr3').checked || document.getElementById('rr4').checked){
+        document.getElementById('vopros5').style.display = "none";
+        document.getElementById('vopros6').style.display = "block";
+    }
+  }
+    if(document.getElementById('vopros4').style.display == "block"){
+      if(document.getElementById('re1').checked || document.getElementById('re2').checked || document.getElementById('re3').checked || document.getElementById('re4').checked){
+        document.getElementById('vopros4').style.display = "none";
+        document.getElementById('vopros5').style.display = "block";
+    }
+  }
+    if(document.getElementById('vopros3').style.display == "block"){
+      if(document.getElementById('rw1').checked || document.getElementById('rw2').checked || document.getElementById('rw3').checked || document.getElementById('rw4').checked){
+        document.getElementById('vopros3').style.display = "none";
+        document.getElementById('vopros4').style.display = "block";
+    }
+  }
+    if(document.getElementById('vopros2').style.display == "block"){
+      if(document.getElementById('rq1').checked || document.getElementById('rq2').checked || document.getElementById('rq3').checked || document.getElementById('rq4').checked){
+        document.getElementById('vopros2').style.display = "none";
+        document.getElementById('vopros3').style.display = "block";
+    }
+  }
+    if(document.getElementById('vopros1').style.display == "block"){
+      if(document.getElementById('r1').checked || document.getElementById('r2').checked || document.getElementById('r3').checked || document.getElementById('r4').checked){
+        document.getElementById('vopros1').style.display = "none";
+        document.getElementById('vopros2').style.display = "block";
+    }
+  }
+    if (document.getElementById('r1').checked) {
+      rekt1_value = document.getElementById('r1').value;
+    }
+    if (document.getElementById('r2').checked) {
+      rekt1_value = document.getElementById('r2').value;
+    }
+    if (document.getElementById('r3').checked) {
+      rekt1_value = document.getElementById('r3').value;
+    }
+    if (document.getElementById('r4').checked) {
+      rekt1_value = document.getElementById('r4').value;
+    }
+    if (document.getElementById('rq1').checked) {
+      rekt2_value = document.getElementById('rq1').value;
+    }
+    if (document.getElementById('rq2').checked) {
+      rekt2_value = document.getElementById('rq2').value;
+    }
+    if (document.getElementById('rq3').checked) {
+      rekt2_value = document.getElementById('rq3').value;
+    }
+    if (document.getElementById('rq4').checked) {
+      rekt2_value = document.getElementById('rq4').value;
+    }
+    if (document.getElementById('rw1').checked) {
+      rekt3_value = document.getElementById('rw1').value;
+    }
+    if (document.getElementById('rw2').checked) {
+      rekt3_value = document.getElementById('rw2').value;
+    }
+    if (document.getElementById('rw3').checked) {
+      rekt3_value = document.getElementById('rw3').value;
+    }
+    if (document.getElementById('rw4').checked) {
+      rekt3_value = document.getElementById('rw4').value;
+    }
+    if (document.getElementById('re1').checked) {
+      rekt4_value = document.getElementById('re1').value;
+    }
+    if (document.getElementById('re2').checked) {
+    rekt4_value = document.getElementById('re2').value;
+    }
+    if (document.getElementById('re3').checked) {
+      rekt4_value = document.getElementById('re3').value;
+    }
+    if (document.getElementById('re4').checked) {
+      rekt4_value = document.getElementById('re4').value;
+    }
+    if (document.getElementById('rr1').checked) {
+      rekt5_value = document.getElementById('rr1').value;
+    }
+    if (document.getElementById('rr2').checked) {
+      rekt5_value = document.getElementById('rr2').value;
+    }
+    if (document.getElementById('rr3').checked) {
+      rekt5_value = document.getElementById('rr3').value;
+    }
+    if (document.getElementById('rr4').checked) {
+      rekt5_value = document.getElementById('rr4').value;
+    }
+    if (document.getElementById('rt1').checked) {
+      rekt6_value = document.getElementById('rt1').value;
+    }
+    if (document.getElementById('rt2').checked) {
+      rekt6_value = document.getElementById('rt2').value;
+    }
+    if (document.getElementById('rt3').checked) {
+      rekt6_value = document.getElementById('rt3').value;
+    }
+    if (document.getElementById('rt4').checked) {
+      rekt6_value = document.getElementById('rt4').value;
+    }
+    if (document.getElementById('ry1').checked) {
+      rekt7_value = document.getElementById('ry1').value;
+    }
+    if (document.getElementById('ry2').checked) {
+      rekt7_value = document.getElementById('ry2').value;
+    }
+    if (document.getElementById('ry3').checked) {
+      rekt7_value = document.getElementById('ry3').value;
+    }
+    if (document.getElementById('ry4').checked) {
+      rekt7_value = document.getElementById('ry4').value;
+    }
+    if (document.getElementById('ru1').checked) {
+      rekt8_value = document.getElementById('ru1').value;
+    }
+    if (document.getElementById('ru2').checked) {
+      rekt8_value = document.getElementById('ru2').value;
+    }
+    if (document.getElementById('ru3').checked) {
+      rekt8_value = document.getElementById('ru3').value;
+    }
+    if (document.getElementById('ru4').checked) {
+      rekt8_value = document.getElementById('ru4').value;
+    }
+    if (document.getElementById('ri1').checked) {
+      rekt9_value = document.getElementById('ri1').value;
+    }
+    if (document.getElementById('ri2').checked) {
+      rekt9_value = document.getElementById('ri2').value;
+    }
+    if (document.getElementById('ri3').checked) {
+      rekt9_value = document.getElementById('ri3').value;
+    }
+    if (document.getElementById('ri4').checked) {
+      rekt9_value = document.getElementById('ri4').value;
+    }
+    if (document.getElementById('ro1').checked) {
+      rekt10_value = document.getElementById('ro1').value;
+    }
+    if (document.getElementById('ro2').checked) {
+      rekt10_value = document.getElementById('ro2').value;
+    }
+    if (document.getElementById('ro3').checked) {
+      rekt10_value = document.getElementById('ro3').value;
+    }
+    if (document.getElementById('ro4').checked) {
+      rekt10_value = document.getElementById('ro4').value;
+    }
+    if (document.getElementById('rp1').checked) {
+      rekt11_value = document.getElementById('rp1').value;
+    }
+    if (document.getElementById('rp2').checked) {
+      rekt11_value = document.getElementById('rp2').value;
+    }
+    if (document.getElementById('rp3').checked) {
+      rekt11_value = document.getElementById('rp3').value;
+    }
+    if (document.getElementById('rp4').checked) {
+      rekt11_value = document.getElementById('rp4').value;
+    }
+    if(rekt1_value!=""){
+      document.getElementById('disp1').style.display = "none";
+      document.getElementById('disp11').style.display = "block";
+    }
+    if(rekt2_value!=""){
+      document.getElementById('disp2').style.display = "none";
+      document.getElementById('disp22').style.display = "block";
+    }
+    if(rekt3_value!=""){
+      document.getElementById('disp3').style.display = "none";
+      document.getElementById('disp33').style.display = "block";
+    }
+    if(rekt4_value!=""){
+      document.getElementById('disp4').style.display = "none";
+      document.getElementById('disp44').style.display = "block";
+    }
+    if(rekt5_value!=""){
+      document.getElementById('disp5').style.display = "none";
+      document.getElementById('disp55').style.display = "block";
+    }
+    if(rekt6_value!=""){
+      document.getElementById('disp6').style.display = "none";
+      document.getElementById('disp66').style.display = "block";
+    }
+    if(rekt7_value!=""){
+      document.getElementById('disp7').style.display = "none";
+      document.getElementById('disp77').style.display = "block";
+    }
+    if(rekt8_value!=""){
+      document.getElementById('disp8').style.display = "none";
+      document.getElementById('disp88').style.display = "block";
+    }
+    if(rekt9_value!=""){
+      document.getElementById('disp9').style.display = "none";
+      document.getElementById('disp99').style.display = "block";
+    }
+    if(rekt10_value!=""){
+      document.getElementById('disp10').style.display = "none";
+      document.getElementById('disp101').style.display = "block";
+    }
+    if(rekt11_value!=""){
+      document.getElementById('disp11').style.display = "none";
+      document.getElementById('disp111').style.display = "block";
+    }
+}
+function proverit(){
+  
+
+  if (document.getElementById('r1').checked) {
+    rekt1_value = document.getElementById('r1').value;
+  }
+  if (document.getElementById('r2').checked) {
+    rekt1_value = document.getElementById('r2').value;
+  }
+  if (document.getElementById('r3').checked) {
+    rekt1_value = document.getElementById('r3').value;
+  }
+  if (document.getElementById('r4').checked) {
+    rekt1_value = document.getElementById('r4').value;
+  }
+otv_uch_1 = rekt1_value;
+otv_ucgenika_1 = rekt1_value;
+otv_uch_1 = kodirov(otv_uch_1);
+
+if (document.getElementById('rq1').checked) {
+  rekt2_value = document.getElementById('rq1').value;
+}
+if (document.getElementById('rq2').checked) {
+  rekt2_value = document.getElementById('rq2').value;
+}
+if (document.getElementById('rq3').checked) {
+  rekt2_value = document.getElementById('rq3').value;
+}
+if (document.getElementById('rq4').checked) {
+  rekt2_value = document.getElementById('rq4').value;
+}
+otv_uch_2 = rekt2_value;
+otv_ucgenika_2 = rekt2_value;
+otv_uch_2 = kodirov(otv_uch_2);
+
+if (document.getElementById('rw1').checked) {
+  rekt3_value = document.getElementById('rw1').value;
+}
+if (document.getElementById('rw2').checked) {
+  rekt3_value = document.getElementById('rw2').value;
+}
+if (document.getElementById('rw3').checked) {
+  rekt3_value = document.getElementById('rw3').value;
+}
+if (document.getElementById('rw4').checked) {
+  rekt3_value = document.getElementById('rw4').value;
+}
+otv_uch_3 = rekt3_value;
+otv_ucgenika_3 = rekt3_value;
+otv_uch_3 = kodirov(otv_uch_3);
+
+if (document.getElementById('re1').checked) {
+  rekt4_value = document.getElementById('re1').value;
+}
+if (document.getElementById('re2').checked) {
+  rekt4_value = document.getElementById('re2').value;
+}
+if (document.getElementById('re3').checked) {
+  rekt4_value = document.getElementById('re3').value;
+}
+if (document.getElementById('re4').checked) {
+  rekt4_value = document.getElementById('re4').value;
+}
+otv_uch_4 = rekt4_value;
+otv_ucgenika_4 = rekt4_value;
+otv_uch_4 = kodirov(otv_uch_4);
+
+if (document.getElementById('rr1').checked) {
+  rekt5_value = document.getElementById('rr1').value;
+}
+if (document.getElementById('rr2').checked) {
+  rekt5_value = document.getElementById('rr2').value;
+}
+if (document.getElementById('rr3').checked) {
+  rekt5_value = document.getElementById('rr3').value;
+}
+if (document.getElementById('rr4').checked) {
+  rekt5_value = document.getElementById('rr4').value;
+}
+otv_uch_5 = rekt5_value;
+otv_ucgenika_5 = rekt5_value;
+otv_uch_5 = kodirov(otv_uch_5);
+
+if (document.getElementById('rt1').checked) {
+  rekt6_value = document.getElementById('rt1').value;
+}
+if (document.getElementById('rt2').checked) {
+  rekt6_value = document.getElementById('rt2').value;
+}
+if (document.getElementById('rt3').checked) {
+  rekt6_value = document.getElementById('rt3').value;
+}
+if (document.getElementById('rt4').checked) {
+  rekt6_value = document.getElementById('rt4').value;
+}
+otv_uch_6 = rekt6_value;
+otv_ucgenika_6 = rekt6_value;
+otv_uch_6 = kodirov(otv_uch_6);
+
+if (document.getElementById('ry1').checked) {
+  rekt7_value = document.getElementById('ry1').value;
+}
+if (document.getElementById('ry2').checked) {
+  rekt7_value = document.getElementById('ry2').value;
+}
+if (document.getElementById('ry3').checked) {
+  rekt7_value = document.getElementById('ry3').value;
+}
+if (document.getElementById('ry4').checked) {
+  rekt7_value = document.getElementById('ry4').value;
+}
+otv_uch_7 = rekt7_value;
+otv_ucgenika_7 = rekt7_value;
+otv_uch_7 = kodirov(otv_uch_7);
+
+if (document.getElementById('ru1').checked) {
+  rekt8_value = document.getElementById('ru1').value;
+}
+if (document.getElementById('ru2').checked) {
+  rekt8_value = document.getElementById('ru2').value;
+}
+if (document.getElementById('ru3').checked) {
+  rekt8_value = document.getElementById('ru3').value;
+}
+if (document.getElementById('ru4').checked) {
+  rekt8_value = document.getElementById('ru4').value;
+}
+otv_uch_8 = rekt8_value;
+otv_ucgenika_8 = rekt8_value;
+otv_uch_8 = kodirov(otv_uch_8);
+
+if (document.getElementById('ri1').checked) {
+  rekt9_value = document.getElementById('ri1').value;
+}
+if (document.getElementById('ri2').checked) {
+  rekt9_value = document.getElementById('ri2').value;
+}
+if (document.getElementById('ri3').checked) {
+  rekt9_value = document.getElementById('ri3').value;
+}
+if (document.getElementById('ri4').checked) {
+  rekt9_value = document.getElementById('ri4').value;
+}
+otv_uch_9 = rekt9_value;
+otv_ucgenika_9 = rekt9_value;
+otv_uch_9 = kodirov(otv_uch_9);
+
+if (document.getElementById('ro1').checked) {
+  rekt10_value = document.getElementById('ro1').value;
+}
+if (document.getElementById('ro2').checked) {
+  rekt10_value = document.getElementById('ro2').value;
+}
+if (document.getElementById('ro3').checked) {
+  rekt10_value = document.getElementById('ro3').value;
+}
+if (document.getElementById('ro4').checked) {
+  rekt10_value = document.getElementById('ro4').value;
+}
+otv_uch_10 = rekt10_value;
+otv_ucgenika_10 = rekt10_value;
+otv_uch_10 = kodirov(otv_uch_10);
+
+if (document.getElementById('rp1').checked) {
+  rekt11_value = document.getElementById('rp1').value;
+}
+if (document.getElementById('rp2').checked) {
+  rekt11_value = document.getElementById('rp2').value;
+}
+if (document.getElementById('rp3').checked) {
+  rekt11_value = document.getElementById('rp3').value;
+}
+if (document.getElementById('rp4').checked) {
+  rekt11_value = document.getElementById('rp4').value;
+}
+otv_uch_11 = rekt11_value;
+otv_ucgenika_11 = rekt11_value;
+otv_uch_11 = kodirov(otv_uch_11);
+
+ball = 0;
+document.getElementById('rtd4').style.display = "none";
+document.getElementById('vopros1').style.display = "none";
+document.getElementById('vopros2').style.display = "none";
+document.getElementById('vopros3').style.display = "none";
+document.getElementById('vopros4').style.display = "none";
+document.getElementById('vopros5').style.display = "none";
+document.getElementById('vopros6').style.display = "none";
+document.getElementById('vopros7').style.display = "none";
+document.getElementById('zet').style.display = "none";
+document.getElementById('rtd').style.width="100%";
+document.getElementById('rtd2').style.width="0%";
+document.getElementById('rtd3').style.height="";
+document.getElementById('timee').style.display = "none";
+document.getElementById('vopros8').style.display = "none";
+document.getElementById('vopros9').style.display = "none";
+document.getElementById('vopros10').style.display = "none";
+document.getElementById('vopros11').style.display = "none";
+document.getElementById('kn_sl').style.display = "none";
+document.getElementById('kn_pr').style.display = "none";
+otveti = "<table class='table'><tr class='table-active'><td>№</td><td>Вопрос</td><td>Ответ</td></tr>";
+if(otv_uch_1 == voprosi[0][1]){
+    ball +=1;
+    otveti += "<tr class='table-success'><td>1</td><td>"+voprosi[0][0]+"</td><td>Вы ответили верно. Ваш ответ: "+otv_ucgenika_1+"</td></tr>";
+} else {
+    otveti += "<tr class='table-danger'><td>1</td><td>"+voprosi[0][0]+"</td><td>Вы ответили не верно. Ваш ответ: "+otv_ucgenika_1+"</td></tr>";
+}
+if(otv_uch_2 == voprosi[1][1]){
+    ball +=1;
+    otveti += "<tr class='table-success'><td>2</td><td>"+voprosi[1][0]+"</td><td>Вы ответили верно. Ваш ответ: "+otv_ucgenika_2+"</td></tr>";
+} else {
+   otveti += "<tr class='table-danger'><td>2</td><td>"+voprosi[1][0]+"</td><td>Вы ответили не верно. Ваш ответ: "+otv_ucgenika_2+"</td></tr>";
+}
+if(otv_uch_3 == voprosi[2][1]){
+    ball +=1;
+    otveti += "<tr class='table-success'><td>3</td><td>"+voprosi[2][0]+"</td><td>Вы ответили верно. Ваш ответ: "+otv_ucgenika_3+"</td></tr>";
+} else {
+    otveti += "<tr class='table-danger'><td>3</td><td>"+voprosi[2][0]+"</td><td>Вы ответили не верно. Ваш ответ: "+otv_ucgenika_3+"</td></tr>";
+}
+if(otv_uch_4 == voprosi[3][1]){
+    ball +=1;
+    otveti += "<tr class='table-success'><td>4</td><td>"+voprosi[3][0]+"</td><td>Вы ответили верно. Ваш ответ: "+otv_ucgenika_4+"</td></tr>";
+} else {
+    otveti += "<tr class='table-danger'><td>4</td><td>"+voprosi[3][0]+"</td><td>Вы ответили не верно. Ваш ответ: "+otv_ucgenika_4+"</td></tr>";
+}
+if(otv_uch_5 == voprosi[4][1]){
+    ball +=1;
+    otveti += "<tr class='table-success'><td>5</td><td>"+voprosi[4][0]+"</td><td>Вы ответили верно. Ваш ответ: "+otv_ucgenika_5+"</td></tr>";
+} else {
+    otveti += "<tr class='table-danger'><td>5</td><td>"+voprosi[4][0]+"</td><td>Вы ответили не верно. Ваш ответ: "+otv_ucgenika_5+"</td></tr>";
+}
+if(otv_uch_6 == voprosi[5][1]){
+    ball +=1;
+    otveti += "<tr class='table-success'><td>6</td><td>"+voprosi[5][0]+"</td><td>Вы ответили верно. Ваш ответ: "+otv_ucgenika_6+"</td></tr>";
+} else {
+   otveti += "<tr class='table-danger'><td>6</td><td>"+voprosi[5][0]+"</td><td>Вы ответили не верно. Ваш ответ: "+otv_ucgenika_6+"</td></tr>";
+}
+if(otv_uch_7 == voprosi[6][1]){
+    ball +=1;
+    otveti += "<tr class='table-success'><td>7</td><td>"+voprosi[6][0]+"</td><td>Вы ответили верно. Ваш ответ: "+otv_ucgenika_7+"</td></tr>";
+} else {
+    otveti += "<tr class='table-danger'><td>7</td><td>"+voprosi[6][0]+"</td><td>Вы ответили не верно. Ваш ответ: "+otv_ucgenika_7+"</td></tr>";
+}
+if(otv_uch_8 == voprosi[7][1]){
+    ball +=1;
+    otveti += "<tr class='table-success'><td>8</td><td>"+voprosi[7][0]+"</td><td>Вы ответили верно. Ваш ответ: "+otv_ucgenika_8+"</td></tr>";
+} else {
+     otveti += "<tr class='table-danger'><td>8</td><td>"+voprosi[7][0]+"</td><td>Вы ответили не верно. Ваш ответ: "+otv_ucgenika_8+"</td></tr>";
+}
+if(otv_uch_9 == voprosi[8][1]){
+    ball +=1;
+    otveti += "<tr class='table-success'><td>9</td><td>"+voprosi[8][0]+"</td><td>Вы ответили верно. Ваш ответ: "+otv_ucgenika_9+"</td></tr>";
+} else {
+    otveti += "<tr class='table-danger'><td>9</td><td>"+voprosi[8][0]+"</td><td>Вы ответили не верно. Ваш ответ: "+otv_ucgenika_9+"</td></tr>";
+}
+if(otv_uch_10 == voprosi[9][1]){
+    ball +=1;
+    otveti += "<tr class='table-success'><td>10</td><td>"+voprosi[9][0]+"</td><td>Вы ответили верно. Ваш ответ: "+otv_ucgenika_10+"</td></tr>";
+} else {
+    otveti += "<tr class='table-danger'><td>10</td><td>"+voprosi[9][0]+"</td><td>Вы ответили не верно. Ваш ответ: "+otv_ucgenika_10+"</td></tr>";
+}
+if(otv_uch_11 == voprosi[10][1]){
+    ball +=1;
+    otveti += "<tr class='table-success'><td>11</td><td>"+voprosi[10][0]+"</td><td>Вы ответили верно. Ваш ответ: "+otv_ucgenika_11+"</td></tr>";
+} else {
+    otveti += "<tr class='table-danger'><td>11</td><td>"+voprosi[10][0]+"</td><td>Вы ответили не верно. Ваш ответ: "+otv_ucgenika_11+"</td></tr>";
+}
+vsego_zadach = 11;
+procent_vip = ball/vsego_zadach * 100;
+procent_vip = procent_vip.toFixed();
+document.getElementById('rezultat').innerHTML = "<p style='font-weight:bold;'>Результаты теста. Тема - '<span id='tema2'></span>'.</p><span id='ot'>Задания выполнены верно на "+procent_vip+"%.</span><br><div class='progress'><div class='progress-bar' role='progressbar' style='width: "+procent_vip+"%' aria-valuenow='"+procent_vip+"' aria-valuemin='0' aria-valuemax='100'></div></div><br>"+otveti;
+document.getElementById('tema2').innerHTML = test;
+
+}
+    function skip(){ 
+if(document.getElementById('vopros10').style.display == "block"){ 
+document.getElementById('vopros10').style.display = "none"; 
+document.getElementById('vopros11').style.display = "block"; 
+document.getElementById('kn_sl').style.display = "none"; 
+document.getElementById('kn_pr').style.display = "block"; 
+document.getElementById('skip').style.display = "none";
+document.getElementById('disp10').style.background = "#FF00FF";
+} 
+if(document.getElementById('vopros9').style.display == "block"){ 
+document.getElementById('vopros9').style.display = "none"; 
+document.getElementById('vopros10').style.display = "block";
+document.getElementById('disp9').style.background = "#FF00FF";
+} 
+if(document.getElementById('vopros8').style.display == "block"){ 
+document.getElementById('vopros8').style.display = "none"; 
+document.getElementById('vopros9').style.display = "block";
+document.getElementById('disp8').style.background = "#FF00FF";
+} 
+if(document.getElementById('vopros7').style.display == "block"){ 
+document.getElementById('vopros7').style.display = "none"; 
+document.getElementById('vopros8').style.display = "block";
+document.getElementById('disp7').style.background = "#FF00FF";
+} 
+if(document.getElementById('vopros6').style.display == "block"){ 
+document.getElementById('vopros6').style.display = "none"; 
+document.getElementById('vopros7').style.display = "block";
+document.getElementById('disp6').style.background = "#FF00FF";
+} 
+if(document.getElementById('vopros5').style.display == "block"){ 
+document.getElementById('vopros5').style.display = "none"; 
+document.getElementById('vopros6').style.display = "block";
+document.getElementById('disp5').style.background = "#FF00FF";
+} 
+if(document.getElementById('vopros4').style.display == "block"){ 
+document.getElementById('vopros4').style.display = "none"; 
+document.getElementById('vopros5').style.display = "block";
+document.getElementById('disp4').style.background = "#FF00FF";
+} 
+if(document.getElementById('vopros3').style.display == "block"){ 
+document.getElementById('vopros3').style.display = "none"; 
+document.getElementById('vopros4').style.display = "block";
+document.getElementById('disp3').style.background = "#FF00FF";
+} 
+if(document.getElementById('vopros2').style.display == "block"){ 
+document.getElementById('vopros2').style.display = "none"; 
+document.getElementById('vopros3').style.display = "block";
+document.getElementById('disp2').style.background = "#FF00FF";
+} 
+if(document.getElementById('vopros1').style.display == "block"){ 
+id="z_1" 
+document.getElementById('vopros1').style.display = "none"; 
+document.getElementById('vopros2').style.display = "block";
+document.getElementById('disp1').style.background = "#FF00FF";
+} 
+}
+function kodirov(stroka) {
+    var b64ch = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefg'+
+                   'hijklmnopqrstuvwxyz0123456789+/=';
+    var b64enc = '';
+    var ch1, ch2, ch3;
+    var en1, en2, en3, en4;
+    for (var i=0; i<stroka.length;) {
+        ch1 = stroka.charCodeAt(i++);
+        ch2 = stroka.charCodeAt(i++);
+        ch3 = stroka.charCodeAt(i++);
+        en1 = ch1 >> 2;
+        en2 = ((ch1 & 3) << 4) | (ch2 >> 4);
+        en3 = isNaN(ch2) ? 64:(((ch2 & 15) << 2) | (ch3 >> 6));
+        en4 = isNaN(ch3) ? 64:(ch3 & 63);
+        b64enc += b64ch.charAt(en1) + b64ch.charAt(en2) +
+                      b64ch.charAt(en3) + b64ch.charAt(en4);
+    }
+    return b64enc;
+}
+function peremeshat_vse_voprosi(m_vopros) {
+    for (var i = m_vopros.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = m_vopros[i];
+        m_vopros[i] = m_vopros[j];
+        m_vopros[j] = temp;
+    }
+    return m_vopros;
+}
+</script>
+</body>
+</html>
