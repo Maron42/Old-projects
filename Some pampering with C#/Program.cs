@@ -4,48 +4,55 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace Цикл_if_и_question_mark_и_switch
+namespace Коллекция__for__while__do_while
 {
-
     class Program
     {
-        
         static void Main(string[] args)
         {
-            Random rand = new Random(); //Задаем Random
-            int input = int.Parse(Console.ReadLine()); //Задаем input?
-            // var just = input == 10 ? "Yep" : "Nope"; // Истина или ложь как проверка используется
+            var rnd = new Random();
+            int j = 0, Count = 0;
+            var List = new List<int>();
+            for (var i = 0; i <= 60; )
+            {
+                List.Add(i);
+                i += 4;
+            }
+
+            foreach (int i in List)
+            {
+                Console.WriteLine(i);
+            }
             
-            string s = Console.ReadLine(); //Вводим переменную s и переводим ее в int, сейчас это не использующейся счетчик
-            int q = Convert.ToInt32(s);
+            Count = List.ToArray().Sum();
+            Console.Write("Sum:");
+            Console.WriteLine(Count);
+            Count = List.ToArray().Length;
+            Console.Write("Lenght: ");
+            Console.WriteLine(Count);
+            Count = List.ToArray().Min();
+            Console.Write("Min: ");
+            Console.WriteLine(Count);
 
-            if (input == 1) //цикл пошел
-            {
-                Console.WriteLine(rand.Next(20, 1000)); // Выводим рандомное число в диапазоне 
-            }
-            else if(input == 2)
-            {
-                Console.WriteLine(rand.Next(100000)); // Тут диапазон от нуля
-            }
-            else if (input == 3)
-            {
-                Console.WriteLine(rand.Next(0)); // Тут диапазон от нуля
-            }
-            else
-            {
-                Console.WriteLine("Э");
-            }
+            Console.WriteLine("\n\t\tNEXT:");
 
-            switch (input) //Как я понял, тот же цикл
+            int[,] MASS = new int[15, 15];
+            for (var i = 0; i < 15; i++)
             {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                default:
-                    break;
+                for (var q = 0; q < 15; q++)
+                {
+                    int sk = 0;
+                    sk += MASS[i, q] * MASS[i, q];
+                    MASS[i, q] = sk;
+                }
+                Console.WriteLine();
             }
+           /* do
+            {
+
+            }
+            while ();
+            */
 
             Console.ReadKey();
         }
